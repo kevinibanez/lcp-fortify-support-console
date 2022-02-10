@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { FilterUserManager } from './components/support/UserManager/user-manager-component';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,20 @@ export class AppComponent {
   jsonCheck = true;
   jsonResult: any;
 
+  currentYearLong(): number {
+    return new Date().getFullYear();
+  }
+  
   constructor(
     private router: Router
   ) {
-
+    this.title = 'Lcp.Fortify.SupportConsole';
   }
 }
+
+  // ---------------------------------------------------------------------------
+  // -----------------------   UX Experience   ---------------------------------
+  // ---------------------------------------------------------------------------
+
+
+

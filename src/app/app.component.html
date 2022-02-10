@@ -32,7 +32,7 @@ name = Context.User?.GetDisplayName();
             object-src 'none';
             base-uri 'none';
           " />
-  <title>@ViewData["Title"] - Fortify by LCPtracker, Inc.</title>
+  <title>Fortify by LCPtracker, Inc.</title>
   <link rel="icon" type="image/x-icon" href="/src/assets/favicon.ico" />
   <link rel="shortcut icon" type="image/x-icon" href="/src/assets/favicon.ico" />
   <link href="/src/assets/css/bootstrap.css" rel="stylesheet" />
@@ -84,14 +84,14 @@ name = Context.User?.GetDisplayName();
       <a class="nav-title" tabindex="0">Menu</a>
     </div>
   </header>
-  @await Html.PartialAsync("_MobileMenu")
+ <!-- @await Html.PartialAsync("_MobileMenu") -->
   <div class="margin-15"></div>
 
 
   <main>
     <div class="container">
       <div class="body-content">
-        @RenderBody()
+       <!-- @RenderBody() -->
       </div>
     </div>
   </main>
@@ -110,7 +110,7 @@ name = Context.User?.GetDisplayName();
         <li><a tabindex="0" target="_blank" href="https://lcptracker.com/education-webinar">Webinar Sign Up</a></li>
         <li><a tabindex="0" target="_blank" href="https://www.lcptracker.com/contact/demo-sign-up">Demo Sign Up</a></li>
       </ul>
-      <p>@DateTime.UtcNow.Year LCPtracker, Inc. All Rights Reserved</p>
+      <p>{{currentYearLong()}} LCPtracker, Inc. All Rights Reserved </p>
     </div>
   </footer>
 
@@ -118,7 +118,7 @@ name = Context.User?.GetDisplayName();
 
   <!--
         Discard Changes Global Dialog
-    -->
+   
   <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="modalWindowLabel"
     aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -139,11 +139,11 @@ name = Context.User?.GetDisplayName();
       </div>
     </div>
   </div>
+-->
 
 
-
-  //@await Html.PartialAsync("_CookieConsentPartial")
-  // @await Html.PartialAsync("_NoScriptNotification")
+ <!--  @await Html.PartialAsync("_CookieConsentPartial") -->
+ <!-- @await Html.PartialAsync("_NoScriptNotification") -->
 
   <!-- JS FRAMEWORKS -->
   <script src="../assets/js/contentful.browser.min.js"></script>
@@ -171,7 +171,7 @@ name = Context.User?.GetDisplayName();
       }
     }
   </script>
-  @RenderSection("scripts", required: false)
+ <!-- @RenderSection("scripts", required: false) -->
 </body>
 
 </html>

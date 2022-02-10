@@ -10,8 +10,8 @@ export interface SupportViewModel {
   PageNo: number;
   Orderby: string;
   IsAssending: boolean;
-  ErrorMessage: string;
-  RecordCount: number;
+  ErrorMessage?: string;
+  RecordCount?: number;
   Users: Array<UserRecordVM>;
 }
 
