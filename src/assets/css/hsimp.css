@@ -1,0 +1,22 @@
+ul.hsimp-checks li h2 {
+    /*font: normal 14px/20px 'Raleway', sans-serif;*/
+    color: #343231;
+}
+.hsimp-level {
+    color: black;
+    transition: background .5s linear;
+    background-color: #fff
+}
+.hsimp-level--bad, 
+.hsimp-level--insecure {
+    border: 2px solid #c63136 !important;
+    background-color: white !important;
+}
+.hsimp-level--ok {
+    border: 2px solid #de7b46 !important;
+    background-color: white !important;
+}
+.hsimp-level--good {
+    border: 2px solid #2f8249 !important;
+    background-color: white !important;
+}

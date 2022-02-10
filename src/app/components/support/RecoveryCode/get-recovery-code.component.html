@@ -1,0 +1,27 @@
+﻿<!--
+@{
+string code = ViewBag.RecoveryCode;
+SupportViewModel SupportViewModel = ViewBag.SupportViewModel;
+} -->
+
+<div class="card mb-3">
+    <div class="card-header blue darken-4 text-white">Recovery Code</div>
+    <div class="card-body">
+        <h5 class="card-title">Please make sure that the user knows that this is a one time use code.</h5>
+        <div class="card-text">
+            <h2>
+                @code
+            </h2>
+        </div>
+    </div>
+    <div class="card-footer">
+        <form asp-action="Index" method="post">
+            <input type="hidden" id="SearchKey" name="SearchKey" value="@SupportViewModel.SearchKey" />
+            <input type="hidden" id="PageNo" name="PageNo" value="@SupportViewModel.PageNo" />
+            <input type="hidden" id="RecsPerPage" name="RecsPerPage" value="@SupportViewModel.RecsPerPage" />
+            <button type="submit" class="btn_sv">
+                Return
+            </button>
+        </form>
+    </div>
+</div>

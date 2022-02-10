@@ -1,0 +1,109 @@
+<!--
+@{
+    ViewBag.Title = "LCPtracker - Support Console ";
+    Layout = "~/Views/Shared/_LayoutHome.html";
+}
+-->
+@* SearchBar ------------------------------------------- *@
+<div class="search-heading card-shadow">
+    <div class="row">
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="search-card input-group">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <input name="SearchKey" autofocus id="SearchKey" type="text" placeholder="Search User"
+                  class="form-control" aria-label="user's key word" autocomplete="on" accept="" />
+            </div>
+        </div>
+        <div class="col-6 col-lg-2">
+            <div class="searchbar-perpage">
+                <select class="btn-dropdown" id="perPage" name="perPage" title="Per Page">
+                    <option value="10">10 / Page</option>
+                    <option value="25">25 / Page</option>
+                    <option value="50">50 / Page</option>
+                    <option value="100">100 / Page</option>
+                    <option value="250">250 / Page</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-6 col-lg-3">
+            <div id="userCounted" class="searchbar-total hide">
+                <span class="search-results"><span id="search-results-number"></span> Result(s)</span>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-3">
+            <div id="userActions" class="searchbar-actions hide">
+                <div class="searchbar-action"><button name="Previous" id="goPrev1" title="Previous" disabled><i
+                          class="fa fa-chevron-left" aria-hidden="true"></i></button></div>
+                <div class="searchbar-action"><button name="Next" id="goNext1" title="Next" disabled><i
+                          class="fa fa-chevron-right" aria-hidden="true"></i></button></div>
+                <div class="searchbar-action">
+                    <a title="Reset" asp-area="Support" asp-controller="UserManager" asp-action="index" role="button">
+                        <i class="fa fa-undo" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="loading-container">
+    <div id="loading_search" class="mdl-progress mdl-js-progress mdl-progress__indeterminate hide"></div>
+</div>
+<div id="usersList"></div>
+
+<div id="noList" class="no-results"></div>
+
+@* PAGINATION ------------------------------------------- *@
+<br />
+<div id="pagination" class="card card-shadow hide">
+    <div class="card-pagination">
+        <div class="row">
+            <div class="col-12 text-right">
+                <!--  @*<div class="pagination-divider">
+                    <select id="perPage2">
+                        <option value="10">10 / Page</option>
+                        <option value="25">25 / Page</option>
+                        <option value="50" selected="true">50 / Page</option>
+                        <option value="100">100 / Page</option>
+                        <option value="250">250 / Page</option>
+                    </select>
+                </div>*@ -->
+                <div class="pagination-count">
+                    <span id="countBegin"></span> - <span id="countEnd"></span>
+                    of <div id="countTotal" class="pagination-total">13123437</div>
+                </div>
+                <div class="pagination-goto d-none d-md-inline-block">
+                    <!-- <input type="number" id="pageTo" placeholder="Page #" class="pagination-input form-control" />
+                    <button id="goGo" disabled><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
+                    <select id="pageTo"></select> -->
+                </div>
+                <div class="pagination-actions">
+                    <div class="pagination-action d-inline-block d-md-none d-lg-inline-block">
+                        <button type="button" id="goStart" title="Start" disabled><i class="fa fa-step-backward"
+                              aria-hidden="true"></i></button>
+                    </div>
+                    <div class="pagination-action d-inline-block d-md-none d-lg-inline-block">
+                        <button type="button" id="goPrev2" title="Previous" disabled><i class="fa fa-chevron-left"
+                              aria-hidden="true"></i></button>
+                    </div>
+                    <div class="pagination-action d-inline-block d-md-none d-lg-inline-block">
+                        <button type="button" id="goNext2" title="Next" disabled><i class="fa fa-chevron-right"
+                              aria-hidden="true"></i></button>
+                    </div>
+                    <div class="pagination-action d-inline-block d-md-none d-lg-inline-block">
+                        <button type="button" id="goEnd" title="End" disabled><i class="fa fa-step-forward"
+                              aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="toastie" class="mdl-js-snackbar mdl-snackbar">
+    <div class="mdl-snackbar__text"></div>
+    <button class="mdl-snackbar__action" type="button">OK</button>
+</div>
+
+
+<!-- Script -->
+<script src="../../../../assets/js/support_console.js"></script>
