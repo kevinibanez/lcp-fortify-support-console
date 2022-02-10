@@ -1,7 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [];
+import { GetRecoveryToken } from './components/support/RecoveryCode/get-recovery-code.component';
+import { FilterUserManager } from './components/support/UserManager/user-manager-component';
+
+const routes: Routes = [{ path: 'UserManager', component: FilterUserManager },
+  { path: 'RecoveryCode', component: GetRecoveryToken }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
