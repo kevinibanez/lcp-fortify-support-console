@@ -1,7 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
-@import url(../src/assets/css/font-awesome.min.css);
-@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
-@import url(https://cdn.lcptracker.net/Common/brandLCPtracker.css);
+// @import url(../src/assets/css/font-awesome.min.css);
+// @import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+// @import url(https://cdn.lcptracker.net/Common/brandLCPtracker.css);
+
+//
+//  Set up Global Styles
+//
+@import 'https://cdn.lcptracker.net/Common/brandLCPtracker.css';
+
+/*
+*   0.1 - Imports
+*/
+// Bootstrap
+//@import 'https://cdn.lcptracker.net/Common/css/bootstrap-4.min.css';
+@import 'assets/css/bootstrap.min.css';
+// Fontawesome  -- used in index.html because of font imports.
+// @import 'https://cdn.lcptracker.net/Common/css/font-awesome.min.css';
+@import 'assets/css/font-awesome.min.css';
+// Animate
+// @import 'https://cdn.lcptracker.net/Common/css/animate.css';
+@import 'assets/css/animate.css';
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v47/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/*
+*   0.2 - Reset
+*/
+
+:root {
+  --darkprimary: #0A4166;
+  --lightprimary: #8DB9E3;
+  --primary: #466cb4;
+  --texticons : #fafafa;
+  --accent: #00897b;
+  --primarytext: #212121;
+  --secondarytext: #757575;
+  --divider: #dddddd;
+}
+
+
+
 
 @font-face {
     font-family: 'Montserrat';
@@ -3890,44 +3948,6 @@ label[for="PhoneNumber"]:nth-of-type(2) {
         margin-top: auto;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@import url("https://lcpkibenezdev.blob.core.windows.net/storageibanez/portal/dev/assets/css/bootstrap-4.min.css");
-@import url("https://lcpkibenezdev.blob.core.windows.net/storageibanez/portal/dev/assets/font-awesome-4.7.0/css/font-awesome.min.css");
-@import url("https://lcpkibenezdev.blob.core.windows.net/storageibanez/portal/dev/assets/css/animate.css");
-@import url("https://lcpkibenezdev.blob.core.windows.net/storageibanez/portal/dev/styles.3bbce7155a65ef376e58.css");
-
-:root {
-    --darkprimary: #0A4166;
-    --lightprimary: #8DB9E3;
-    --primary: #466cb4;
-    --texticons: #fafafa;
-    --accent: #00897b;
-    --primarytext: #231f20;
-    --secondarytext: #757575;
-    --divider: #bdbdbd;
-}
-
 
 
 
