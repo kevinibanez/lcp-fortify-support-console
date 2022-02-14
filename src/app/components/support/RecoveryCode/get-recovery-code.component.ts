@@ -11,12 +11,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 
 export class GetRecoveryToken implements OnInit {
-    @Input() code: any;
+    supportViewModel: SupportViewModel = new SupportViewModel();
     @Input() heading = 'Recovery Code';
-    @Input() SearchKey = '';//SupportViewModel.SearchKey;
-    @Input() PageNo = '';//SupportViewModel.SearchValue;
-    @Input() RecsPerPage = '';
-    
+
+    code(): string {
+        return '123456789';
+    }
+
     constructor() { }
     ngOnInit(): void {
 

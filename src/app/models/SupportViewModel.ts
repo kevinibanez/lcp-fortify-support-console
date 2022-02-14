@@ -3,11 +3,12 @@ import { Guid } from "guid-typescript";
 //< Work in Progress> still
 ///
 export class SupportViewModel {
-  SearchKey?: string = "";
+  SearchKey?: string = "Test";
+  SearchValue?: number = 1;
   BtnAction: string = "";
   RecsPerPage: number = 10;
   PageNo: number = 1;
-  Orderby: string = "";
+  Orderby: string = "UserName";
   IsAssending: boolean = false;
   ErrorMessage?: string;
   RecordCount?: number;
