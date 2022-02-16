@@ -344,7 +344,7 @@ function displayOrgs(item) {
     }
     return orgEl;
 }
-function displayHistory(item) {
+function displayHistory( ) {
     historyEl = '';
     if (item.User.Logins) {
         for (let hist of item.User.Logins) {

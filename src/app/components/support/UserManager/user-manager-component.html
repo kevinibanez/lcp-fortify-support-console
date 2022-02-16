@@ -59,7 +59,7 @@
         <div class="row">
             <div class="col-12 text-right">
                 <div class="pagination-divider">
-                    <select name="perPage2" id="perPage2">
+                    <select title="perPage2" name="perPage2" id="perPage2">
                         <option value="10">10 / Page</option>
                         <option value="25">25 / Page</option>
                         <option value="50" selected="true">50 / Page</option>
@@ -72,9 +72,10 @@
                     of <div id="countTotal" class="pagination-total">13123437</div>
                 </div>
                 <div class="pagination-goto d-none d-md-inline-block">
-                    <input type="number" id="pageTo" placeholder="Page #" class="pagination-input form-control" />
-                    <button type="button" id="goGo" disabled><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></button>
-                    <select id="pageTo"></select>
+                    <input title="pageTonumber" type="number" id="pageToNumber" placeholder="Page #" class="pagination-input form-control" />
+                    <button title="buttongoGO" type="button" id="goGo" disabled><i class="fa fa-arrow-circle-right"
+                          aria-hidden="true"></i></button>
+                    <select title="pageTo" id="pageTo"></select>
                 </div>
                 <div class="pagination-actions">
                     <div class="pagination-action d-inline-block d-md-none d-lg-inline-block">
